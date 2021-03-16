@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Kalkulator</title>
+  </head>
+  <body>
+    
+    <h1>Kalkulator Sederhana</h1>
+    
+    <!-- Memunculkan textbox untuk mendapat nilai bilangan 1 -->
+    Bilangan 1 :
+    <input type="number" id="b1">
+    <br><br>
+    
+    <!-- Memunculkan textbox untuk mendapat nilai bilangan 2-->
+    Bilangan 2 :
+    <input type="number" id="b2">
+    <br><br>
+    
+    <!-- Menginput button untuk mengeksekusi function -->
+    <input type="button" name="button_tambah" value="+" onclick="tambah()">
+    <input type="button" name="button_kurang" value="-" onclick="kurang()">
+    <input type="button" name="button_kali" value="x" onclick="kali()">
+    <input type="button" name="button_bagi" value="/" onclick="bagi()">
+    <br><br>
+    
+    <!-- Memunculkan textbox untuk memunculkan hasil-->
+    Hasil :
+    <input type="text" name="" value="" readonly id="hasil">
+    <br>
+    
+    
+    <script language="javascript">
+      
+      // Memanggil function untuk melakukan penjumlahan 
+      function tambah()
+      {
+        // Deklararasi dan input nilai bilangan
+        b1 = parseInt(document.getElementById("b1").value);
+        b2 = parseInt(document.getElementById("b2").value);
+        // Deklarasi operasi penjumlahan 
+        hasil = b1+b2;        
+        document.getElementById("hasil").value = hasil;
+        
+      }
+      // Memanggil function untuk melakukan pengurangan
+      function kurang()
+      {
+        // Deklararasi dan input nilai bilangan
+        b1 = parseInt(document.getElementById("b1").value);
+        b2 = parseInt(document.getElementById("b2").value);
+        // Deklarasi operasi pengurangan
+        hasil = b1-b2;        
+        document.getElementById("hasil").value = hasil;
+        
+      }
+      // Memanggil function untuk melakukan perkalian 
+      function kali()
+      {
+        // Deklararasi dan input nilai bilangan
+        b1 = parseInt(document.getElementById("b1").value);
+        b2 = parseInt(document.getElementById("b2").value);
+        // Deklarasi operasi perkalian
+        hasil = b1*b2;       
+        document.getElementById("hasil").value = hasil;
+        
+      }
+      // Memanggil function untuk melakukan pembagian
+      function bagi()
+      {
+        // Deklararasi dan input nilai bilangan
+        b1 = parseInt(document.getElementById("b1").value);
+        b2 = parseInt(document.getElementById("b2").value);
+        // Deklarasi operasi pembagian
+        hasil = b1/b2; 
+        document.getElementById("hasil").value = hasil;
+        
+      }
+    </script>
+  </body>
+</html>

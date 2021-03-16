@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Latihan 1</title>
+    </head>
+<body>
+    <form method="POST" name="form_nilai">
+    <h1>Pengecekan Nilai</h1>
+
+    <!-- Memunculkan textbox untuk mendapat nilai -->
+    <p>Masukkan Nilai : <input type="text" name="n" size="20"></p>
+    <p>Nilai Anda : <input type="text" name="h" size="20"></p>
+
+    <!-- Menginput button untuk mengeksekusi function -->
+    <p><input type="button" value="Hitung" name="b" onclick=ceknilai()>
+    </form>
+    <script language="Javascript">
+
+        // Memanggil function untuk mencek nilai
+        function ceknilai () {
+            
+            // Deklarasi dan input nilai variabel
+            var val1 = document.form_nilai. n. value
+
+            // Seleksi nilai menggunakan if else
+            if (val1<=40) 
+                document.form_nilai.h. value="E" // Output : E 
+            else if (val1<=55) 
+                document.form_nilai.h. value="D" // Output : D
+            else if (val1<=60) 
+                document.form_nilai.h. value="C" // Output : C
+            else if (val1<=65) 
+                document.form_nilai.h. value="BC" // Output : BC
+            else if (val1<=70) 
+                document.form_nilai.h. value="B" // Output : B
+            else if (val1<=80) 
+                document.form_nilai.h. value="AB" // Output : AB
+            else if (val1<=100) 
+                document.form_nilai.h. value="A"  // Output : A
+            else
+            document.form_nilai.h. value="Kosong" // Output : Kosong
+        } 
+    </script></body></html>
